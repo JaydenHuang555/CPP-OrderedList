@@ -2,7 +2,7 @@
 
 #include <ostream>
 #include <stdexcept>
-#include <iostream>
+
 template<typename T>
 class OrderedList {
 #define size (((unsigned long)(tail - subList)))
@@ -10,8 +10,7 @@ class OrderedList {
     T *subList, *tail;
 
 public:
-    OrderedList(){
-        this->cap = 1 << 3;
+    OrderedList() : cap(1 << 3) {
         this->subList = new T[this->cap];
         this->tail = subList;
     }
